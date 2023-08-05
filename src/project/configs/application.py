@@ -15,4 +15,3 @@ def register_routers(app: FastAPI) -> None:
 
     app.include_router(core_router)
     app.include_router(user_router)
-
