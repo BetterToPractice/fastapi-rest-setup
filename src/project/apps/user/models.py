@@ -1,7 +1,11 @@
-from sqlmodel import Field, SQLModel
+from sqlmodel import Field
+
+from libs.db import SQLModel
 
 
 class User(SQLModel, table=True):
+    __tablename__ = "users_users"
+
     id: int = Field(
         default=None,
         nullable=False,

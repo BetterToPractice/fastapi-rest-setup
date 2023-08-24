@@ -28,7 +28,5 @@ class Settings(BaseSettings):
 
 @lru_cache()
 def get_settings():
-    print("lewat sini")
     result = Settings()
-    print("settings", result.sqlalchemy_database_url)
     return result

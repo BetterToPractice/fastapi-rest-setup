@@ -9,8 +9,9 @@ from sqlmodel import SQLModel
 
 from alembic import context
 
+from apps.user.models import User  # noqa
+
 from configs.settings import get_settings
-from models import *
 
 settings = get_settings()
 

@@ -4,8 +4,8 @@ from fastapi import Depends
 from sqlmodel import select
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from core.db import get_session
-from models import User
+from libs.db import get_session
+from .models import User
 
 from . import router
 
