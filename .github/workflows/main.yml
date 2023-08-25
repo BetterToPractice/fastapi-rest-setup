@@ -1,0 +1,22 @@
+name: 'Test'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+           python-version: 3.8
+      - run: pip install -r requirements.txt
+      # - run: pytest .
+      - run: flake8 .
+      - run: isort .
+      - run: black .
