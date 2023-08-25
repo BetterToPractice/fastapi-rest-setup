@@ -5,9 +5,9 @@ from sqlmodel import select
 from sqlmodel.ext.asyncio.session import AsyncSession
 
 from libs.db import get_session
-from .models import User
 
 from . import router
+from .models import User
 
 
 @router.get("/users", response_model=List[User])
